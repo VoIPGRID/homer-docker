@@ -10,15 +10,6 @@
 # KAMAILIO_HEP_PORT   Kamailio HEP Socket port (9060)
 # ----------------------------------------------------
 
-# Wait for MySQL
-
-while [[ ! -f "/homer-semaphore/.bootstrapped" ]]; do
-  echo "Homer web app, waiting for MySQL"
-  sleep 2;
-done
-
-echo "Homer web app container detected MySQL is running & bootstrapped"
-
 
 # HOMER API CONFIG
 PATH_HOMER_CONFIG=/var/www/html/api/configuration.php
