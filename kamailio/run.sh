@@ -12,15 +12,6 @@
 # KAMAILIO_HEP_PORT   Kamailio HEP Socket port (9060)
 # ----------------------------------------------------
 
-# Wait for MySQL
-
-while [[ ! -f "/homer-semaphore/.bootstrapped" ]]; do
-  echo "Kamailio, waiting for MySQL"
-  sleep 2;
-done
-
-echo "Kamailio container detected MySQL is running & bootstrapped"
-
 # Kamailio config
 export PATH_KAMAILIO_CFG=/etc/kamailio/kamailio.cfg
 
