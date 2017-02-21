@@ -10,12 +10,6 @@
 # DB_HOST             MySQL host (127.0.0.1 [docker0 bridge])
 # ----------------------------------------------------
 
-while [[ ! -f "/homer-semaphore/.bootstrapped" ]]; do
-  echo "Homer cron container, waiting for MySQL"
-  sleep 2;
-done
-
-
 # Reconfigure rotation
 
 export PATH_ROTATION_SCRIPT=/opt/new/homer_rotate
